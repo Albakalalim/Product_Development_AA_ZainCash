@@ -1,0 +1,129 @@
+﻿#Using Python Django to create Employee Files based on different file_paths
+
+
+from django.db import models
+
+class Employee(files.File):
+name = files.CharField(max_length=255)
+text = files.DecimalField(max_digits=5, decimal_places=2)
+pdf = files.CharField(max_length=255)
+python= files.CharField(max_length=255)
+document= files.CharField(max_length=255)
+>>> employee = employee.objects.get(name="jack")
+>>> employee.file
+<CharFieldFile: employee/ paper.pdf>
+>>> employee.file1.name
+'jack/paper.pdf'
+<CharFieldFile: employee/ numbers.docx>
+>>> employee.file2.name
+'jack/numbers.docx'
+    
+import os
+import comtypes.client
+in_file=r'file.name'
+in_file2=r'file.name'
+ 
+   
+>>> from django.core.files import File
+f1=open(’jack/employee.file1.name’)
+f2=open(‘jack/employee.file2.name’)	
+jackFiles=(f1,f2)
+
+>>> employee = employee.objects.get(name="Richard")
+>>> employee.file
+<CharFieldFile: employee/ letter.txt>
+>>> employee.file.name
+'Richard/letter.txt'
+
+>>> from django.core.files import File
+f3=open(’Richard/employee.file.name’)
+RichardFile=(f3)
+
+
+>>> employee = employee.objects.get(name="Johnny")
+>>> employee.file
+<CharFieldFile: employee/ test.py>
+>>> employee.file.name
+'Johnny/test.py'
+
+>>> from django.core.files import File
+f4=open(’Johnny/employee.file.name’)
+JohnnyFile=(f4)
+
+
+
+
+>>> import os
+>>> from django.conf import settings
+>>> initial_path = employee.file.path
+>>> employee.file.name = 'jack/paper.pdf'
+>>> new_path = settings.MEDIA_ROOT + employee.jackFiles.name
+>>> # Move the file on the filesystem
+>>> os.rename(initial_path, new_path)
+>>> employee.save()
+>>> employee.jackFiles.path
+'/media/jack/paper.pdf'
+>>> employee.jackFiles.path == new_path
+True
+
+
+#
+>>> import os
+>>> from django.conf import settings
+>>> initial_path = employee.file3.path
+>>> employee.file3.name = 'Richard/letter.txt'
+>>> employee.RichardFile.name = employee.file3.name 
+>>> new_path = settings.MEDIA_ROOT + employee.RichardFile.name
+>>> # Move the file on the filesystem
+>>> os.rename(initial_path, new_path)
+>>> employee.save()
+>>> employee.RichardFile.path
+'/media/Richard/letter.txt'
+>>> employee.RichardFile.path == new_path
+True
+>>> import os
+>>> from django.conf import settings
+>>> initial_path = employee.file4.path
+>>> employee.file4.name = 'Johnny/test.py'
+>>> employee.JohnnyFile.name = employee.file4.name 
+>>> new_path = settings.MEDIA_ROOT + employee.JohnnyFile.name
+>>> # Move the file on the filesystem
+>>> os.rename(initial_path, new_path)
+>>> employee.save()
+>>> employee.JohnnyFile.path
+'/media/Johnny/test.py'
+>>> employee.JohnnyFile.path == new_path
+True
+
+# input and Output filesType
+
+import os
+import comtypes.client
+import time
+
+
+wdFormatPDF = 17
+
+
+file1=r'absolute pdf file 1'
+file2=r’absolute docx file 2’
+jackFiles=r'absolute pdf file 1' + ‘r’absolute docx file 2’
+
+file3=r'absolute txt file 3'
+RichardFile=r'absolute txt file 3'
+
+file4=r’absolute py file 4’
+JohnnyFile=r’absolute py file 4’
+
+    
+# print out filenames
+    print file1
+    print file2
+    print file3
+    print file4
+    print jackFiles
+    print RichardFile
+    print JohnnyFile
+
+
+
