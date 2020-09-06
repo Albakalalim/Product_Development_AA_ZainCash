@@ -1,0 +1,8 @@
+﻿# Building a UI for the input “Solution_Question1” Text file
+
+<form action="/https://github.com/Albakalalim/Solution_Test-Interview_ZainCash/commit/2dfaa0d82d861352d8325f62449df784e52e31d0/" method="post">
+    <label for="Albakalalim">Enter name: </label>
+    <input id="Albakalalim" type="text" name="name_field" value="Default name for team.">
+    <input type="submit" value="OK">
+</form>
+
