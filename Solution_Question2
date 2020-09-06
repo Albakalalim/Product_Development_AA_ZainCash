@@ -1,0 +1,16 @@
+﻿# Solution
+
+query ='''
+SELECT Total_Salary(employee.id) AS “total_salary”
+WHERE Full_Name IN (‘Babil’,’Baghdad’,’Kut’,’Najaf’), AS ‘full_name’,
+Salary(*) AS ‘salary’,
+CAST (SUM(Salary) AS DECIMAL(7,2))
+AS ‘Total_Salary)
+FROM Test INNER JOIN Employee AS city
+ON city.name=employee.id
+INNER JOIN employee.id AS city
+ON employee.full_name=full_name.id
+GROUP BY city ORDER BY Total_Salary
+HAVING salary<=1230
+'''
+run_query(query)
